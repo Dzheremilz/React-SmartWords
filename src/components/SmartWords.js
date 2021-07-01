@@ -35,7 +35,7 @@ const SmartWords = () => {
 
   const handleInputChange = (e) => {
     const inputValue = e.target.value;
-    const inputHashValue = ethers.utils.id(inputValue);
+    const inputHashValue = ethers.utils.id(inputValue.trim().toUpperCase());
     setQuote(inputValue);
     setHashedQuote(inputHashValue);
   };
